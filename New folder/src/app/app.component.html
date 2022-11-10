@@ -1,0 +1,72 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="login-form">
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 offset-sm-6 p-5">
+                  <div class="row ">
+                    <h1>Welcome</h1>
+                    <p>Log in to your account to continue</p>
+
+                  </div>
+                  <form [formGroup]="passwordForm">
+                    <div class="row">
+                      <div class="input-group mb-3 col-sm-6">
+
+                        <input type="text" class="form-control border-right-0 border rounded-pill" placeholder="awsome@user.com" aria-label="Username" aria-describedby="basic-addon1">
+                          <div class="input-group-prepend bg-white">
+                              <span class="input-group-text border-right-0  rounded-right bg-white" id="basic-addon1">
+                                <i class="fa fa-user fa-lg"></i></span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+
+                      <input type="Password" formControlName="password"
+                      class="form-control border-right-0 border rounded-pill" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+
+
+                <div class="input-group-prepend bg-white">
+                            <span class="input-group-text border-right-0  rounded-right bg-white" id="basic-addon1">
+                              <i class="fa fa-lock fa-lg"></i></span>
+
+                        </div>
+                    </div>
+                    <app-password-strength [passwordToCheck]="passwordForm.value.password"></app-password-strength>
+                </div>
+
+                    <br>
+
+                    <u style="margin:109px">Forget your Password?</u><br>
+
+                    <button type="submit" class="btn btn-success">Log In</button>
+                    <br>
+                    <br>
+                    <span class="me-3">Don't have an account?</span>
+                    <u>Sign up!</u><br>
+                    <a class="btn btn-outline-light btn-floating m-1"style="background-color: #3b5998;" href="#!" role="button"><i
+                        class="fa fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-outline-light btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                        class="fa fa-twitter"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1"style="background-color: #dd4b39;"  href="#!" role="button"><i
+                        class="fa fa-instagram"></i></a>
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
